@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.png" />
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Our Menu - Coffee Shop</title>
+  </head>
+
+  <body>
+    <!-- Header And Main Heading Start -->
+    <div class="container-fluid header pages-general-header position-relative">
+      <div class="bgoverlay"></div>
+      <!-- Logo -->
+      <div class="row">
+        <div
+          class="col-12 d-flex justify-content-start justify-content-sm-center align-items-center pt-4 ps-3 pt-sm-3"
+        >
+          <img
+            src="images/logo.png"
+            alt="Coffee-Shop-Logo"
+            class="img-fluid logo ms-1 ms-sm-0"
+          />
+        </div>
+      </div>
+      <!-- Large devices Navigation Bar Start -->
+      <div class="row pt-3">
+        <nav class="navbar navbar-expand-lg bg-transparent">
+          <div class="container-fluid">
+            <!-- <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="menu.html"
+                    >Our Menu</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="about.html"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="contact.html"
+                    >Contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#placeOrderPopUp"
+                    >Place Order</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Large devices Navigation Bar End -->
+
+      <!-- Small devices Navigation Bar Start -->
+      <button class="mobile-navbar-toggler" id="mobile-menu-toggler">
+        <i class="fa-solid fa-bars mobile-navbar-toggler-icon"></i>
+      </button>
+      <div class="col-md-3 col-sm-5 col-7 mobile-menu-cover" id="mobile-menu">
+        <h4>Menu</h4>
+        <ul class="p-0 mt-5">
+          <li><a href="index.html">- Home</a></li>
+          <li><a href="menu.html" class="active">- Our Menu</a></li>
+          <li><a href="about.html">- About</a></li>
+          <li><a href="contact.html">- Contact</a></li>
+          <li>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#placeOrderPopUp"
+              >- Place Order</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Small devices Navigation Bar End -->
+      <!-- Header End -->
+
+      <!-- Modal Start -->
+      <div
+        class="modal fade"
+        id="placeOrderPopUp"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog mx-auto">
+          <div class="modal-content">
+            <div
+              class="modal-body d-flex flex-column justify-content-center align-items-center"
+            >
+              <div
+                class="col-12 modal-heading-cover d-flex justify-content-between align-items-center"
+              >
+                <h3 class="modal-heading">Order Coffee</h3>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="col-12 form-side">
+                <form id="order-form">
+                  <div class="row p-0 m-0 mb-3 name-row">
+                    <div class="col p-0 m-0">
+                      <input
+                        type="text"
+                        name="customer-name"
+                        id="customer-name"
+                        placeholder="Customer Name"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col p-0 m-0">
+                      <input
+                        type="email"
+                        name="customer-email"
+                        id="customer-email"
+                        placeholder="Customer Email"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="row p-0 m-0 mb-3 pt-1 name-row">
+                    <div class="col p-0 m-0">
+                      <input
+                        type="text"
+                        name="customer-address"
+                        id="customer-address"
+                        placeholder="Customer Home Address"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="col p-0 m-0">
+                      <input
+                        type="number"
+                        name="customer-coming-time"
+                        id="customer-coming-time"
+                        placeholder="Minutes To Reach The shop"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="row p-0 m-0 mb-3 pt-1 message-row">
+                    <div class="col-12 p-0 m-0">
+                      <textarea
+                        name="order"
+                        id="order"
+                        placeholder="Your Order"
+                        class="form-control"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="row p-0 m-0 mb-3 pt-1 submit-button-row">
+                    <div class="col-12 p-0 m-0">
+                      <button
+                        type="submit"
+                        name="order-btn"
+                        id="order-btn"
+                        class="btn"
+                      >
+                        Place Order
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <p id="order-form-error" class="form-error">
+                  Please Fill The Form Correctly.
+                </p>
+                <p id="order-form-success" class="form-success">
+                  Thank You For Your Order
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal End -->
+
+      <!-- Main Heading Section Start -->
+      <div class="row main-heading-row">
+        <div class="col-12">
+          <h1 class="text-center m-0 p-0">Our Menu</h1>
+        </div>
+      </div>
+      <!-- Main Heading Section End -->
+    </div>
+    <!-- Header And Main Heading End -->
+
+    <!-- Drinks Menu/Section 1 Start -->
+    <div class="container-fluid home-page-section-three menu-page-section-one">
+      <!-- Heading -->
+      <div class="row justify-content-center align-items-center heading-row">
+        <div class="col-12 text-center">
+          <h2 class="m-0">Drinks</h2>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <hr class="m-0 heading-underline-line" />
+        </div>
+        <p class="text-center home-page-section-three-desc">
+          Sip and savor the extraordinary. Experience our amazing elixirs in
+          which every sip tells a story.
+        </p>
+      </div>
+      <!-- Cards -->
+      <div class="row general-side-spacing">
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-brown">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img src="images/product-01-free-img.png" alt="Product" />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 4.20</h5>
+              <h4>Cappuccino</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Sip in the allure of perfectly crafted Cappuccino.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-cyan">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img src="images/product-02-free-img.png" alt="Product" />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 3.15</h5>
+              <h4>Cafe Latte</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Sip in the allure of perfectly crafted Cafe Latte.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-brown">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img src="images/product-01-free-img.png" alt="Product" />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 4.20</h5>
+              <h4>Cappuccino</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Sip in the allure of perfectly crafted Cappuccino.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-black">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img src="images/product-03-free-img.png" alt="Product" />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 2.75</h5>
+              <h4>Dark Coffee</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Sip in the allure of perfectly crafted Dark Coffee.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-brown">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img src="images/product-01-free-img.png" alt="Product" />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 4.20</h5>
+              <h4>Cappuccino</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Sip in the allure of perfectly crafted Cappuccino.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-cyan">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img src="images/product-02-free-img.png" alt="Product" />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 3.15</h5>
+              <h4>Cafe Latte</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Sip in the allure of perfectly crafted Cafe Latte.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-brown">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img src="images/product-01-free-img.png" alt="Product" />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 4.20</h5>
+              <h4>Cappuccino</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Sip in the allure of perfectly crafted Cappuccino.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-black">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img src="images/product-03-free-img.png" alt="Product" />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 2.75</h5>
+              <h4>Dark Coffee</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Sip in the allure of perfectly crafted Dark Coffee.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+      </div>
+    </div>
+    <!-- Drinks Menu/Section 1 End -->
+
+    <!-- Coffee For Home/Section 2 Start -->
+    <div
+      class="container-fluid home-page-section-three menu-page-section-one menu-page-section-two"
+    >
+      <!-- Heading -->
+      <div class="row justify-content-center align-items-center heading-row">
+        <div class="col-12 text-center">
+          <h2 class="m-0">Coffee For Home</h2>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <hr class="m-0 heading-underline-line" />
+        </div>
+        <p class="text-center home-page-section-three-desc">
+          Bring the brew home, Elevate your mornings with our finest coffee
+          selections. Your daily ritual, Perfected.
+        </p>
+      </div>
+      <!-- Cards -->
+      <div class="row general-side-spacing">
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-cyan">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img
+                src="images/product-07-free-img.png"
+                alt="Product"
+                class="coffee-for-home-img"
+              />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 19.90</h5>
+              <h4>Liberica</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Liberica beans a symphony of flavors in every sip.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-brown">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img
+                src="images/product-06-free-img.png"
+                alt="Product"
+                class="coffee-for-home-img"
+              />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 24.20</h5>
+              <h4>Arabica</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Arabica beans', a symphony of flavors in every sip.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-black">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img
+                src="images/product-05-free-img.png"
+                alt="Product"
+                class="coffee-for-home-img"
+              />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 29.50</h5>
+              <h4>Robusta</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Robusta beans a symphony of flavors in every sip.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+
+        <!-- Card Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 px-2 mb-4">
+          <div class="menu-drinks-card card-brown">
+            <div
+              class="card-img d-flex justify-content-center align-items-center"
+            >
+              <img
+                src="images/product-04-free-img.png"
+                alt="Product"
+                class="coffee-for-home-img"
+              />
+            </div>
+            <div
+              class="card-details d-flex flex-column justify-content-center align-items-center"
+            >
+              <h5 class="mb-sm-0">$ 34.90</h5>
+              <h4>Excelsa</h4>
+              <p class="text-center mb-sm-2 mb-4 pb-1 px-sm-0 px-3">
+                Excelsa beans', a symphony of flavors in every sip.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card End -->
+      </div>
+    </div>
+    <!-- Coffee For Home/Section 2 End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer-cover">
+      <div class="row justify-content-center">
+        <div
+          class="col-lg-8 col-9 d-flex flex-md-nowrap flex-wrap justify-content-center footer"
+        >
+          <!-- Footer Column One Start -->
+          <div
+            class="col-md-4 col-12 footer-column footer-column-1 mb-md-0 mb-5"
+          >
+            <h2>About us</h2>
+            <p class="pt-1 mb-4 pe-lg-4 pe-0">
+              At Coffee Shop, we're more than just beans and brews – we're a
+              haven for coffee enthusiasts. we're on a mission to craft moments
+              of joy.
+            </p>
+            <div class="social-media-icons d-flex">
+              <a
+                href="#"
+                class="social-icon d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-brands fa-square-facebook"></i>
+              </a>
+              <a
+                href="#"
+                class="social-icon d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="social-icon d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Footer Column Two Start -->
+          <div
+            class="col-md-4 col-sm-6 col-12 footer-column footer-column-2 d-flex flex-column align-items-md-end align-items-start pe-lg-0 pe-md-4 mb-sm-0 mb-5"
+          >
+            <h2>Contact</h2>
+            <p class="mb-1 w-75 text-md-end text-start">
+              13 Fifth Avenue, India, TN 600002
+            </p>
+            <p class="mb-1">9876543210</p>
+            <p class="mb-1">coffee@info.com</p>
+          </div>
+          <!-- Footer Column Three Start -->
+          <div
+            class="col-md-4 col-sm-6 col-12 footer-column footer-column-3 d-flex flex-column align-items-sm-end align-items-start"
+          >
+            <h2>Opening hours</h2>
+            <p class="text-sm-end text-start">
+              Mon – Fri — 8AM – 8PM
+              <br />
+              Saturday — 8AM – 4PM
+              <br />
+              Sunday — 8AM – 2PM
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom Start -->
+      <div class="footer-bottom">
+        <p class="text-center">
+          Coffee Shop |by Mohd Omer
+        </p>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Bootstrap Js CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Email Js SDK Installation -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("");
+      })();
+    </script>
+
+    <!-- Custom Js File -->
+    <script src="./app.js"></script>
+  </body>
+</html>

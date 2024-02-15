@@ -1,0 +1,1406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display:wght@700&display=swap');
+
+/* General Styling Start */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-image: linear-gradient(90deg, rgb(127, 69, 37) 0%, rgb(168, 125, 79) 100%);
+}
+
+::selection {
+    background-color: #fff;
+    color: #000;
+}
+
+h1 {
+    font-size: 85px !important;
+    line-height: 1.15em !important;
+}
+
+h2 {
+    font-size: 70px !important;
+    line-height: 1em !important;
+}
+
+h3 {
+    font-size: 50px !important;
+    line-height: 0.9em !important;
+}
+
+h4 {
+    font-size: 30px !important;
+    line-height: 1.2em !important;
+}
+
+h5 {
+    font-size: 20px !important;
+    line-height: 1.2em !important;
+}
+
+h6 {
+    font-size: 15px !important;
+    line-height: 1.25em !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif !important;
+    color: #fff;
+}
+
+p,
+span,
+input,
+button,
+textarea,
+.get-delivery-btn,
+.nav-link,
+.mobile-menu-cover ul {
+    font-size: 15px !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+p {
+    color: #ffffffa6 !important;
+}
+
+.heading-underline-line {
+    border-top: 1px solid #fff;
+    width: 50px;
+    opacity: 1;
+}
+
+.general-side-spacing {
+    padding-left: 62px;
+    padding-right: 62px;
+}
+
+/* Place Order Pop Up Styling Start */
+#placeOrderPopUp .modal-dialog {
+    max-width: 60% !important;
+}
+
+#placeOrderPopUp .modal-content {
+    background-color: transparent;
+    background-image: linear-gradient(45deg, #A77443 0%, #C39868 100%);
+    border: none !important;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+#placeOrderPopUp .modal-heading-cover {
+    margin-bottom: 40px;
+}
+
+.modal-heading-cover .btn-close {
+    box-shadow: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 13px !important;
+}
+
+/* Place Order Pop Up Styling End */
+
+/* General Styling End */
+
+/* -------------------- Home Page Start -------------------- */
+
+/* Header Styling Start */
+.header .logo {
+    width: 137px;
+    aspect-ratio: auto 137 / 133;
+}
+
+.header nav {
+    margin-top: 2px !important;
+}
+
+.header nav .nav-link {
+    color: #fff !important;
+}
+
+.header nav .nav-link:hover {
+    color: #ffffffa6 !important;
+}
+
+.header nav .nav-link.active {
+    color: #ffffffa6 !important;
+}
+
+.mobile-menu-cover .active {
+    color: rgba(108, 57, 29, 0.677)
+}
+
+.header ul.navbar-nav {
+    gap: 0.9rem !important;
+}
+
+.header .mobile-navbar-toggler {
+    display: none;
+    position: absolute;
+    top: 62px;
+    right: 3.6%;
+    border: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.header .mobile-navbar-toggler::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: rgb(108, 57, 29);
+    transition: 0.3s ease-in-out;
+}
+
+.header .mobile-navbar-toggler:hover::after {
+    transform: scale(1);
+}
+
+.header .mobile-navbar-toggler .mobile-navbar-toggler-icon {
+    font-size: 1.1em !important;
+    transition: 0.3s ease-in-out;
+}
+
+.header .mobile-navbar-toggler:hover .mobile-navbar-toggler-icon {
+    color: #fff;
+}
+
+.mobile-menu-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    padding: 90px 30px 40px 50px;
+    transition: 0.3s ease-in-out;
+    transform: translate(-102%, 0) !important;
+    z-index: 10 !important;
+}
+
+.mobile-menu-cover * {
+    color: rgb(108, 57, 29);
+}
+
+.mobile-menu-cover ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 1px;
+}
+
+.mobile-menu-cover a {
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.mobile-menu-cover a:hover {
+    padding-left: 8px;
+}
+
+.open-mobile-menu {
+    transform: translate(0%, 0) !important;
+}
+
+/* Header Styling End */
+
+/* Hero Section Styling Start */
+.hero-section .hero-section-row {
+    padding: 78px 0 116px 50px;
+}
+
+/* Hero Section Styling End */
+
+/* Background Overlay Styling Start */
+.bgoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.hero-section .bgoverlay {
+    background-image: url(../images/hero-01-free-img.jpg);
+    background-position: top right;
+    opacity: .25;
+}
+
+.home-page-section-seven .bgoverlay {
+    background-image: url(../images/bg-005-free-img.png);
+    background-position: center center;
+    opacity: 1;
+}
+
+.pages-general-header .bgoverlay {
+    background-image: url(../images/bg-0006-free-img.png);
+    background-position: top center;
+    background-size: contain;
+    opacity: 1;
+}
+
+/* Background Overlay Styling End */
+
+/* Coffee Cup/Section 2 Styling Start */
+.home-page-section-two {
+    margin-top: -291px;
+}
+
+.home-page-section-two .row {
+    padding: 0 0 0 50px;
+}
+
+/* Coffee Cup/Section 2 Styling End */
+
+/* Drinks Menu/Section 3 Styling Start */
+.home-page-section-three {
+    background-image: url(../images/bg-03-free-img.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.home-page-section-six .heading-underline-line,
+.home-page-section-three .heading-underline-line {
+    margin-top: 11px !important;
+    margin-bottom: 12px !important;
+}
+
+.home-page-section-three-desc {
+    width: 45% !important;
+    margin-bottom: 1.8rem;
+}
+
+.all-drinks-anchor {
+    font-size: 16px !important;
+    letter-spacing: 1px;
+}
+
+.all-drinks-anchor a {
+    text-decoration: none;
+    color: #fff !important;
+    transition: 0.3s ease-in-out;
+}
+
+.all-drinks-anchor a:hover {
+    color: #ffffffa6 !important;
+}
+
+.all-drinks-anchor i {
+    font-size: 15px !important;
+    margin-top: 1px;
+}
+
+.home-page-section-three .drinks-cards-row {
+    padding: 50px 62px 0px;
+}
+
+.drinks-cards-row .drinks-single-card {
+    background-color: transparent;
+    padding: 35px 15px 15px !important;
+    box-shadow: 0 50px 50px -40px rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.drinks-single-card .card-img {
+    margin-bottom: 20px;
+}
+
+.drinks-single-card .card-img img {
+    transition: .3s ease-in-out;
+}
+
+.drinks-single-card .card-img:hover img {
+    transform: scale(1.1);
+}
+
+.drinks-single-card .get-delivery-btn {
+    border-radius: 10px;
+    box-shadow: 0 21px 12px -10px rgba(0, 0, 0, .3) !important;
+    color: #000;
+    padding: 20px;
+    border: none !important;
+    background-color: #fff !important;
+    width: 100% !important;
+    text-transform: capitalize;
+    line-height: 1em;
+    letter-spacing: 1px;
+    margin-top: calc(35px + 0.5em) !important;
+    transition: 0.3s ease-in-out;
+    outline: none !important;
+}
+
+.drinks-single-card .get-delivery-btn:hover {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.card-brown,
+.drinks-cards-row .drinks-single-card:nth-child(1) {
+    background-image: linear-gradient(45deg, #A77443 0%, #C39868 100%);
+}
+
+.card-brown:hover,
+.drinks-cards-row .drinks-single-card:nth-child(1):hover {
+    background-image: linear-gradient(45deg, #996335 0%, #CAA57A 100%);
+    box-shadow: 0 60px 60px -50px rgba(0, 0, 0, .75) !important;
+}
+
+.card-cyan,
+.drinks-cards-row .drinks-single-card:nth-child(2) {
+    background-image: linear-gradient(45deg, #4C8D81 0%, #C39868 100%);
+}
+
+.card-cyan:hover,
+.drinks-cards-row .drinks-single-card:nth-child(2):hover {
+    background-image: linear-gradient(45deg, #4C9588 0%, #C39868 100%);
+    box-shadow: 0 60px 60px -50px rgba(0, 0, 0, .75) !important;
+}
+
+.card-black,
+.drinks-cards-row .drinks-single-card:nth-child(3) {
+    background-image: linear-gradient(45deg, #211B1A 0%, #3F3735 100%);
+}
+
+.card-black:hover,
+.drinks-cards-row .drinks-single-card:nth-child(3):hover {
+    background-image: linear-gradient(45deg, #261F1D 0%, #463D3B 100%);
+    box-shadow: 0 60px 60px -50px rgba(0, 0, 0, .75) !important;
+}
+
+/* Drinks Menu/Section 3 Styling End */
+
+/* Croissants/Section 4 Styling Start */
+.home-page-section-four {
+    background-image: url(../images/bg-04-free-img.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.home-page-section-four .detail-side {
+    padding: 65px 50px 50px calc(62px + 50px);
+}
+
+.home-page-section-five .detail-side h5,
+.home-page-section-four .detail-side h5 {
+    color: #ffffff94 !important;
+}
+
+.home-page-section-five .detail-side h2,
+.home-page-section-four .detail-side h2,
+.home-page-section-five .detail-side .heading-underline-line,
+.home-page-section-four .detail-side .heading-underline-line {
+    margin-bottom: 2.16rem !important;
+}
+
+.home-page-section-five .detail-side .home-page-section-four-desc,
+.home-page-section-four .detail-side .home-page-section-four-desc {
+    margin-bottom: 2.2rem !important;
+}
+
+.home-page-section-four .image-side {
+    padding: 75px 0 50px !important;
+}
+
+/* Croissants/Section 4 Styling End */
+
+/* Buy for Home/Section 5 Styling Start */
+.home-page-section-five .row {
+    padding: 0 62px 50px;
+}
+
+.home-page-section-five .main-cover,
+.home-page-section-seven .main-cover {
+    background-color: transparent;
+    background-image: linear-gradient(45deg, #A77443 0%, #C39868 100%);
+    box-shadow: 0 80px 80px -60px rgba(0, 0, 0, .6);
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.home-page-section-five .main-cover:hover,
+.home-page-section-seven .main-cover:hover {
+    background-image: linear-gradient(45deg, #A77443 0%, #C9A276 100%);
+    box-shadow: 0 90px 90px -60px rgba(0, 0, 0, .5);
+}
+
+.home-page-section-five .main-cover .detail-side {
+    padding: 50px;
+}
+
+.home-page-section-five .main-cover .image-side img {
+    margin-left: 1.47rem !important;
+}
+
+/* Buy for Home/Section 5 Styling End */
+
+/* About/Section 6 Styling Start */
+.home-page-section-six {
+    background-image: url(../images/bg-0001-free-img.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.home-page-section-six .heading-row {
+    padding: 0 0 50px;
+}
+
+.home-page-section-six .about-details-row {
+    padding: 0 62px 0;
+}
+
+.home-page-section-six .about-details-row-side:nth-child(1) {
+    padding: 0 20px 50px;
+}
+
+.home-page-section-six .about-details-row-side:nth-child(2) {
+    padding: 0 20px 50px 80px;
+}
+
+.home-page-section-six .about-details-row-side h5,
+.home-page-section-six .about-details-row-side h6,
+.about-page-section-one h6 {
+    margin-bottom: 20px !important;
+}
+
+.home-page-section-six-desc {
+    margin-bottom: 28px !important;
+    line-height: 1.6em !important;
+}
+
+/* About/Section 6 Styling End */
+
+/* Barista Party/Section 7 Styling Start */
+.home-page-section-seven {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.home-page-section-seven .row {
+    padding: 0 62px;
+}
+
+.home-page-section-seven .barista-details-side {
+    padding: 30px 0 40px 50px;
+}
+
+.home-page-section-seven .barista-details-side h2 {
+    font-size: 100px !important;
+}
+
+.home-page-section-seven .heading-underline-line {
+    margin: 39px 0 !important;
+}
+
+.home-page-section-seven-desc {
+    margin-bottom: 42px !important;
+    line-height: 1.6em !important;
+}
+
+.home-page-section-seven .inner-box-image-side {
+    position: relative;
+    margin: -159.6px !important;
+}
+
+.home-page-section-seven .barista-location-side {
+    background-color: transparent;
+    background-image: linear-gradient(45deg, #C19768 0%, #4F8D81 100%);
+    border-radius: 0 20px 20px 0;
+    padding: 50px 50px 40px;
+}
+
+.barista-location-side hr {
+    border-top: 2px solid #fff !important;
+    opacity: 1 !important;
+    margin: 35px 0 25px !important;
+}
+
+.barista-location-side .address {
+    margin-top: 28px !important;
+}
+
+/* Barista Party/Section 7 Styling End */
+
+/* Footer Styling Start */
+.footer {
+    border-top: 1px solid #fff !important;
+    border-bottom: 1px solid #fff !important;
+    padding: 45px 0;
+}
+
+.footer .footer-column h2 {
+    font-size: 21px !important;
+    margin-bottom: 1.1em !important;
+}
+
+.footer .social-media-icons {
+    gap: 15px !important;
+}
+
+.footer .social-media-icons .social-icon {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.25);
+    width: 44px;
+    height: 44px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social-media-icons .social-icon:hover {
+    background-color: #fff;
+    color: #996335 !important;
+}
+
+.footer .footer-column-1 p,
+.footer .footer-column-3 p {
+    line-height: 1.6em !important;
+}
+
+.footer-bottom {
+    margin: 28px 10px;
+}
+
+/* Footer Styling End */
+
+/* -------------------- Home Page End -------------------- */
+
+
+/* -------------------- Menu Page Start -------------------- */
+
+/* Main Heding Styling Start */
+.pages-general-header .main-heading-row {
+    padding: 103px 0 100px;
+}
+
+/* Main Heding Styling End */
+
+/* Drinks Menu/Section 1 Styling Start */
+.menu-page-section-one {
+    padding-bottom: 100px;
+}
+
+.menu-page-section-one .heading-row {
+    padding-bottom: 46px;
+}
+
+.menu-page-section-one .menu-drinks-card {
+    padding: 35px 15px 15px;
+    box-shadow: 0 50px 50px -40px rgba(0, 0, 0, .5);
+    transition: 0.3s ease-in-out;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu-drinks-card .card-img img:not(.coffee-for-home-img) {
+    width: 80% !important;
+}
+
+/* Drinks Menu/Section 1 Styling End */
+
+/* Coffee For Home/Section 2 Styling Start */
+.home-page-section-three.menu-page-section-one.menu-page-section-two {
+    background-image: url(../images/bg-04-free-img.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu-page-section-two .heading-row {
+    padding-bottom: 21px !important;
+}
+
+.menu-drinks-card .coffee-for-home-img {
+    width: 100% !important;
+}
+
+/* Coffee For Home/Section 2 Styling End */
+
+/* -------------------- Menu Page End -------------------- */
+
+
+/* -------------------- Contact Page Start -------------------- */
+
+/* Get in touch/Section 1 Styling Start */
+.contact-page-section-one {
+    padding-bottom: 100px;
+}
+
+.contact-page-section-one .details-side {
+    padding: 30px 100px 50px 50px;
+}
+
+.contact-page-section-one .details-side .single-contact-details i {
+    font-size: 14px !important;
+}
+
+.contact-page-section-one .details-side .single-contact-details {
+    transition: 0.3s ease-in-out !important;
+}
+
+.contact-page-section-one .details-side .single-contact-details:hover {
+    color: #ffffffa6 !important;
+}
+
+.contact-page-section-one .details-side .social-media-icons {
+    gap: 5px;
+}
+
+.contact-page-section-one .details-side .social-media-icons .social-icon {
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 50% !important;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-page-section-one .details-side .social-media-icons .social-icon:hover {
+    transform: translateY(-8px);
+    opacity: .9;
+}
+
+.contact-page-section-one .form-side {
+    padding-right: 50px !important;
+}
+
+.modal-body .form-side .name-row,
+.contact-page-section-one .form-side .name-row {
+    gap: 20px !important;
+}
+
+.modal-body .form-side input,
+.modal-body .form-side textarea,
+.contact-page-section-one .form-side input,
+.contact-page-section-one .form-side textarea {
+    color: #666;
+    padding: 0.81em 0.77em;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    outline: none !important;
+    background-color: #fafafa;
+    box-shadow: none !important;
+    transition: 0.3s ease-in-out;
+}
+
+.modal-body .form-side input:focus,
+.modal-body .form-side textarea:focus,
+.contact-page-section-one .form-side input:focus,
+.contact-page-section-one .form-side textarea:focus {
+    border-color: #666;
+}
+
+.modal-body .form-side textarea,
+.contact-page-section-one .form-side textarea {
+    height: 120px !important;
+}
+
+.modal-body .form-side .submit-button-row button,
+.contact-page-section-one .form-side .submit-button-row button {
+    color: #000;
+    border: 0 !important;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 20px 50px;
+    font-weight: 500 !important;
+    line-height: 1em;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+}
+
+.modal-body .form-side .submit-button-row button:hover,
+.contact-page-section-one .form-side .submit-button-row button:hover {
+    background-color: #ffffffa6 !important;
+}
+
+.form-error {
+    display: none;
+    border: 1px solid red;
+    background: #ff00002b;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.form-success {
+    display: none;
+    border: 1px solid #07d8af;
+    background: #07d8af2b;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Get in touch/Section 1 Styling End */
+
+/* Map/Section 2 Styling Start */
+.contact-page-section-two {
+    padding-bottom: 100px;
+}
+
+.contact-page-section-two .location-map iframe {
+    border: 0 !important;
+    padding: 0;
+    width: 100% !important;
+    box-shadow: 0 60px 60px -40px rgba(0, 0, 0, .25);
+}
+
+/* Map/Section 2 Styling End */
+
+/* -------------------- Contact Page End -------------------- */
+
+
+/* -------------------- About Page Start -------------------- */
+
+/* Tailored-Made Coffee/Section 1 Styling Start */
+.about-page-section-one hr {
+    border-top: 2px solid #fff !important;
+    opacity: 1 !important;
+    margin: 45px 0 25px !important;
+}
+
+/* Tailored-Made Coffee/Section 1 Styling End */
+
+/* Excited to introduce/Section 2 Styling Start */
+.home-page-section-six.about-page-section-two {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+}
+
+/* Excited to introduce/Section 2 Styling End */
+
+/* Our Gallery/Section 3 Styling Start*/
+.home-page-section-six.about-page-section-three {
+    background: none !important;
+    padding-bottom: 100px;
+}
+
+.home-page-section-six.about-page-section-three .heading-row {
+    padding: 0 0 23px;
+}
+
+.about-page-section-three .gallery-row img {
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.about-page-section-three .gallery-row img:hover {
+    transform: translateY(-8px)
+}
+
+/* Our Gallery/Section 3 Styling End */
+
+/* -------------------- About Page End -------------------- */
+
+
+
+/* Responsive Styling Start */
+@media only screen and (max-width: 1100px) {
+    .home-page-section-two {
+        margin-top: -221px;
+    }
+
+    img[alt="Hero-Coffe-Cup"] {
+        margin-left: 100px !important;
+        max-width: 76% !important;
+    }
+
+    .drinks-cards-row .drinks-single-card h3 {
+        font-size: 42px !important;
+    }
+
+    .home-page-section-five .home-page-section-four-desc {
+        width: 100% !important;
+    }
+
+    .home-page-section-six .about-details-row-side:nth-child(2) {
+        padding: 0 20px 50px 30px;
+    }
+
+    .home-page-section-seven .heading-underline-line {
+        margin: 11px 0 !important;
+    }
+
+    .home-page-section-seven .barista-location-side {
+        padding: 50px 38px 40px;
+    }
+
+    .home-page-section-seven .barista-details-side {
+        padding: 30px 0 40px 40px;
+    }
+
+    .contact-page-section-one .details-side {
+        padding: 30px 50px 50px 40px;
+    }
+
+    .contact-page-section-one .form-side {
+        padding-right: 12px !important;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .header .mobile-navbar-toggler {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img[alt="Hero-Coffe-Cup"] {
+        margin-left: 95px !important;
+        max-width: 89% !important;
+    }
+
+    .home-page-section-three .drinks-cards-row {
+        padding: 50px 30px 0px;
+    }
+
+    .home-page-section-six .about-details-row-side:nth-child(2) {
+        padding: 0 10px 0px 10px;
+    }
+
+    .home-page-section-seven .barista-location-side {
+        border-radius: 0 20px 20px 20px;
+    }
+
+    .home-page-section-seven .inner-box-image-side {
+        margin: -49.6px !important;
+        margin-left: -180px !important;
+    }
+
+    .pages-general-header .main-heading-row {
+        padding: 60px 0 100px;
+    }
+
+    .contact-page-section-one .details-side {
+        padding: 30px 25px 50px 0;
+    }
+
+    .contact-page-section-one .form-side {
+        padding: 0 !important;
+    }
+
+    .home-page-section-six.about-page-section-two {
+        padding-bottom: 100px !important;
+    }
+
+    #placeOrderPopUp .modal-dialog {
+        max-width: 75% !important;
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+    h1 {
+        font-size: 61px !important;
+    }
+
+    h2 {
+        font-size: 50px !important;
+    }
+
+    .drinks-cards-row .drinks-single-card h3,
+    h3 {
+        font-size: 35px !important;
+    }
+
+    h4 {
+        font-size: 22px !important;
+    }
+
+    h5 {
+        font-size: 19px !important;
+    }
+
+    .mobile-menu-cover h4 {
+        font-size: 30px !important;
+    }
+
+    .hero-section .hero-section-row {
+        padding: 78px 0 198px 50px !important;
+    }
+
+    img[alt="Hero-Coffe-Cup"] {
+        margin-left: 15px !important;
+    }
+
+    .home-page-section-three-desc {
+        width: 55% !important;
+    }
+
+    .home-page-section-four .detail-side {
+        padding: 65px 0px 50px calc(62px + 50px);
+    }
+
+    .home-page-section-five .detail-side h2,
+    .home-page-section-four .detail-side h2,
+    .home-page-section-five .detail-side .heading-underline-line,
+    .home-page-section-four .detail-side .heading-underline-line {
+        margin-bottom: 1.03rem !important;
+    }
+
+    .home-page-section-five .main-cover .detail-side {
+        padding: 50px 23px;
+    }
+
+    .home-page-section-six .heading-row {
+        padding: 0 0 40px;
+    }
+
+    .home-page-section-six .about-details-row-side:nth-child(1) {
+        padding: 0 220px 42px 20px;
+    }
+
+    .barista-location-side hr {
+        margin: 21px 0 15px !important;
+    }
+
+    .pages-general-header .main-heading-row {
+        padding: 40px 0 100px;
+    }
+
+    .menu-page-section-one .heading-row {
+        padding-bottom: 23px;
+    }
+
+    .home-page-section-six.about-page-section-three .heading-row {
+        padding: 0 0 13px;
+    }
+}
+
+@media only screen and (max-width: 818px) and (min-width: 768px) {
+    .home-page-section-five .main-cover .image-side img {
+        max-width: 115% !important;
+        margin-left: 0.5rem !important;
+    }
+
+    .modal-body .form-side input,
+    .modal-body .form-side textarea,
+    .contact-page-section-one .form-side input,
+    .contact-page-section-one .form-side textarea {
+        padding: 0.7em 0.77em;
+    }
+
+    .modal-body .form-side .submit-button-row button,
+    .contact-page-section-one .form-side .submit-button-row button {
+        padding: 18px 33px;
+    }
+
+    .mobile-menu-cover {
+        padding: 90px 30px 40px 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .general-side-spacing {
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+
+    .header .logo {
+        max-width: 110px !important;
+    }
+
+    .header .mobile-navbar-toggler {
+        width: 37px;
+        height: 37px;
+        top: 53px !important;
+    }
+
+    .hero-section .hero-section-row {
+        padding: 48px 0 198px 30px !important;
+    }
+
+    img[alt="Hero-Coffe-Cup"] {
+        max-width: 100% !important;
+    }
+
+    .home-page-section-two .row {
+        padding: 0 0 0 30px;
+    }
+
+    .home-page-section-three-desc {
+        width: 75% !important;
+        margin-bottom: 1.3rem;
+    }
+
+    .home-page-section-four .detail-side {
+        padding: 75px 42px 0 42px;
+    }
+
+    .home-page-section-five .detail-side .home-page-section-four-desc,
+    .home-page-section-four .detail-side .home-page-section-four-desc {
+        margin-bottom: 1.8rem !important;
+    }
+
+    .home-page-section-four .image-side {
+        padding: 0 0 50px !important;
+    }
+
+    .home-page-section-five .row {
+        padding: 0 42px 50px;
+    }
+
+    .home-page-section-five .main-cover .image-side img {
+        margin-left: 4.85rem !important;
+        max-width: 82% !important;
+    }
+
+    .home-page-section-five .main-cover .detail-side {
+        padding: 0px 23px 30px;
+    }
+
+    .home-page-section-six .heading-row {
+        padding: 25px 0 35px;
+    }
+
+    .home-page-section-six .about-details-row {
+        padding: 0 42px 0;
+    }
+
+    .home-page-section-six .about-details-row-side:nth-child(1) {
+        padding: 0 170px 36px 20px;
+    }
+
+    .home-page-section-seven .row {
+        padding: 0 42px;
+    }
+
+    .home-page-section-seven .barista-details-side h2 {
+        font-size: 75px !important;
+    }
+
+    .home-page-section-seven .barista-details-side {
+        padding: 30px 40px 40px;
+    }
+
+    .home-page-section-seven .inner-box-image-side {
+        max-width: 94% !important;
+        margin: -152px 0 -122px 0 !important;
+    }
+
+    .home-page-section-seven .barista-details-side .all-drinks-anchor {
+        position: relative;
+        z-index: 3 !important;
+    }
+
+    .about-page-section-one hr {
+        margin: 30px 0 15px !important;
+    }
+
+    .home-page-section-six.about-page-section-two {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .home-page-section-seven {
+        padding-top: 65px;
+    }
+
+    #placeOrderPopUp .modal-dialog {
+        max-width: 84% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 48px !important;
+    }
+
+    h2 {
+        font-size: 46px !important;
+    }
+
+    .home-page-section-three-desc {
+        width: 85% !important;
+    }
+
+    .home-page-section-three {
+        padding-top: 40px;
+    }
+
+    .home-page-section-five .main-cover .image-side img {
+        margin-left: 4rem !important;
+    }
+
+    .home-page-section-six .about-details-row-side:nth-child(1) {
+        padding: 0 15px 36px 20px;
+    }
+
+    .home-page-section-seven .barista-details-side h2 {
+        font-size: 60px !important;
+    }
+
+    .home-page-section-seven .barista-location-side .all-drinks-anchor {
+        padding-top: 30px !important;
+    }
+
+    .home-page-section-seven .inner-box-image-side {
+        max-width: 97% !important;
+        margin: -112px 0 -82px 0 !important;
+    }
+
+    .pages-general-header .main-heading-row {
+        padding: 10px 0 50px;
+    }
+
+    .menu-page-section-one:not(.menu-page-section-two) {
+        padding-bottom: 60px;
+    }
+
+    .home-page-section-six-desc:nth-child(4) {
+        margin-bottom: 17px !important;
+    }
+
+    #placeOrderPopUp .modal-dialog {
+        max-width: 95% !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .pages-general-header .main-heading-row {
+        padding: 0px 0 50px;
+        margin-top: -61px;
+    }
+
+    .contact-page-section-one .details-side {
+        padding: 40px 0 50px 0;
+    }
+}
+
+@media only screen and (max-width: 511px) {
+    h1 {
+        font-size: 41px !important;
+    }
+
+    h2 {
+        font-size: 38px !important;
+    }
+
+    .general-side-spacing {
+        padding-left: 29px;
+        padding-right: 29px;
+    }
+
+    .drinks-cards-row .drinks-single-card h3,
+    h3 {
+        font-size: 28px !important;
+    }
+
+    h4 {
+        font-size: 21px !important;
+    }
+
+    .mobile-menu-cover h4 {
+        font-size: 28px !important;
+    }
+
+    .header .logo {
+        max-width: 94px !important;
+    }
+
+    .header .mobile-navbar-toggler {
+        right: 21px !important;
+    }
+
+    .hero-section .hero-section-row {
+        padding: 48px 17px 268px 17px !important;
+    }
+
+    .home-page-section-two {
+        margin-top: -274px;
+    }
+
+    .home-page-section-two .row {
+        padding: 0 17px;
+    }
+
+    .home-page-section-three-desc {
+        width: 97% !important;
+    }
+
+    .home-page-section-three .drinks-cards-row {
+        padding: 50px 29px 0px;
+    }
+
+    .home-page-section-four .detail-side {
+        padding: 75px 29px 0 29px;
+    }
+
+    .home-page-section-five .row {
+        padding: 0 29px 50px;
+    }
+
+    .home-page-section-five .main-cover .image-side img {
+        margin-left: 3.5rem !important;
+    }
+
+    .home-page-section-six .about-details-row {
+        padding: 0 29px 0;
+    }
+
+    .home-page-section-six .about-details-row-side:nth-child(1) {
+        padding: 0 15px 17px 20px;
+    }
+
+    .home-page-section-seven .row {
+        padding: 0 29px;
+    }
+
+    .pages-general-header .main-heading-row {
+        padding: 0px 0 30px;
+        margin-top: -14px;
+    }
+
+    .contact-page-section-one .details-side .single-contact-details span {
+        font-size: 14px !important;
+    }
+
+    .modal-body .form-side input,
+    .modal-body .form-side textarea,
+    .contact-page-section-one .form-side input,
+    .contact-page-section-one .form-side textarea {
+        padding: 0.7em 0.77em;
+    }
+
+    .modal-body .form-side .name-row,
+    .contact-page-section-one .form-side .name-row {
+        gap: 11px !important;
+    }
+
+    .modal-body .form-side .submit-button-row button,
+    .contact-page-section-one .form-side .submit-button-row button {
+        padding: 18px 33px;
+        width: 100% !important;
+    }
+
+    .about-page-section-one hr {
+        margin: 36px 0 15px !important;
+    }
+
+    .about-page-section-one {
+        padding-top: 27px !important;
+    }
+
+    .home-page-section-six.about-page-section-three {
+        padding-bottom: 50px;
+    }
+
+    #placeOrderPopUp .modal-content {
+        padding: 25px 10px;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .hero-section .hero-section-row {
+        padding: 48px 17px 188px 17px !important;
+    }
+
+    .home-page-section-two {
+        margin-top: -200px;
+    }
+
+    .home-page-section-three .drinks-cards-row {
+        padding: 50px 6px 0px;
+    }
+
+    .home-page-section-five .detail-side h2 {
+        font-size: 34px !important;
+        text-align: center;
+    }
+
+    .home-page-section-five .detail-side h4 {
+        font-size: 19px !important;
+        text-align: center;
+    }
+
+    .home-page-section-five .row {
+        padding: 0 18px 50px;
+    }
+
+    .home-page-section-five .main-cover .image-side img {
+        margin-left: 13% !important;
+    }
+
+    .home-page-section-six .heading-row {
+        padding: 25px 0 23px;
+    }
+
+    .home-page-section-seven .row {
+        padding: 0 18px;
+    }
+
+    .home-page-section-seven .barista-details-side {
+        padding: 30px 25px 40px;
+    }
+
+    .home-page-section-seven .barista-details-side h2 {
+        font-size: 48px !important;
+    }
+
+    .home-page-section-seven .barista-location-side {
+        padding: 50px 25px 40px;
+    }
+
+    .home-page-section-seven-desc {
+        margin-bottom: 22px !important;
+    }
+
+    .home-page-section-seven .inner-box-image-side {
+        max-width: 100% !important;
+        margin: -92px 0 -62px 0 !important;
+    }
+
+    .pages-general-header .main-heading-row {
+        margin-top: 6px;
+    }
+
+    .contact-page-section-one {
+        padding-bottom: 60px;
+    }
+
+    .about-page-section-one hr {
+        margin: 30px 0 15px !important;
+    }
+
+    .home-page-section-six.about-page-section-three .heading-row {
+        padding: 0 0 9px;
+    }
+
+    .mobile-menu-cover {
+        padding: 90px 12px 40px 33px;
+    }
+
+    #placeOrderPopUp .modal-content {
+        padding: 25px 0;
+    }
+}
